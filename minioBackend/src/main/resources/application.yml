@@ -1,0 +1,27 @@
+server:
+  port: 9100
+  servlet:
+    context-path: /mbapi
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/javaLearning?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+mybatis-plus:
+  global-config:
+    banner: false
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+minio:
+  endpoint: 'http://127.0.0.1:9000'
+  accessKey: '7mBzfhLUhUH4NpEWy5no'
+  secretKey: 'CuLEZCSLXgPAZXUFukFzL4X1qA6LtG5x2VRoYYwc'
+  bucket: 'local-test'
+
